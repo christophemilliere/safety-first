@@ -7,21 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		17267EA27C4E278DF851B9CA /* Pods_Safety_First.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48E5819F95A3AB5570FFBD04 /* Pods_Safety_First.framework */; };
 		D950565B212EA13A000EE987 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D950565A212EA13A000EE987 /* AppDelegate.swift */; };
-		D950565D212EA13A000EE987 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D950565C212EA13A000EE987 /* ViewController.swift */; };
+		D950565D212EA13A000EE987 /* CredentialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D950565C212EA13A000EE987 /* CredentialViewController.swift */; };
 		D9505660212EA13A000EE987 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D950565E212EA13A000EE987 /* Main.storyboard */; };
 		D9505662212EA13B000EE987 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9505661212EA13B000EE987 /* Assets.xcassets */; };
 		D9505665212EA13B000EE987 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9505663212EA13B000EE987 /* LaunchScreen.storyboard */; };
+		D950566E212EFD9F000EE987 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = D950566D212EFD9F000EE987 /* Credentials.swift */; };
+		D9505670212EFF1D000EE987 /* CredentialsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D950566F212EFF1D000EE987 /* CredentialsManager.swift */; };
+		D9505672212F0404000EE987 /* CrendentialListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9505671212F0404000EE987 /* CrendentialListViewController.swift */; };
+		D9505674212F074D000EE987 /* EditCrendentialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9505673212F074D000EE987 /* EditCrendentialViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0EBA4EC585AB0DA45AEF33AA /* Pods-Safety First.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Safety First.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Safety First/Pods-Safety First.debug.xcconfig"; sourceTree = "<group>"; };
+		48E5819F95A3AB5570FFBD04 /* Pods_Safety_First.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Safety_First.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C95633D50B9C2890535FEEE /* Pods-Safety First.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Safety First.release.xcconfig"; path = "Pods/Target Support Files/Pods-Safety First/Pods-Safety First.release.xcconfig"; sourceTree = "<group>"; };
 		D9505657212EA13A000EE987 /* Safety First.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Safety First.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D950565A212EA13A000EE987 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D950565C212EA13A000EE987 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D950565C212EA13A000EE987 /* CredentialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialViewController.swift; sourceTree = "<group>"; };
 		D950565F212EA13A000EE987 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D9505661212EA13B000EE987 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D9505664212EA13B000EE987 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D9505666212EA13B000EE987 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D950566D212EFD9F000EE987 /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
+		D950566F212EFF1D000EE987 /* CredentialsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialsManager.swift; sourceTree = "<group>"; };
+		D9505671212F0404000EE987 /* CrendentialListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrendentialListViewController.swift; sourceTree = "<group>"; };
+		D9505673212F074D000EE987 /* EditCrendentialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditCrendentialViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +41,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17267EA27C4E278DF851B9CA /* Pods_Safety_First.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		05B9CC3D93C72F661AC37FAB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0EBA4EC585AB0DA45AEF33AA /* Pods-Safety First.debug.xcconfig */,
+				4C95633D50B9C2890535FEEE /* Pods-Safety First.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		D950564E212EA13A000EE987 = {
 			isa = PBXGroup;
 			children = (
 				D9505659212EA13A000EE987 /* Safety First */,
 				D9505658212EA13A000EE987 /* Products */,
+				05B9CC3D93C72F661AC37FAB /* Pods */,
+				F99E2DF1DBD6FB550DCE753A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +78,34 @@
 		D9505659212EA13A000EE987 /* Safety First */ = {
 			isa = PBXGroup;
 			children = (
+				D950566C212EFD55000EE987 /* Model */,
 				D950565A212EA13A000EE987 /* AppDelegate.swift */,
-				D950565C212EA13A000EE987 /* ViewController.swift */,
+				D950565C212EA13A000EE987 /* CredentialViewController.swift */,
 				D950565E212EA13A000EE987 /* Main.storyboard */,
 				D9505661212EA13B000EE987 /* Assets.xcassets */,
 				D9505663212EA13B000EE987 /* LaunchScreen.storyboard */,
 				D9505666212EA13B000EE987 /* Info.plist */,
+				D9505671212F0404000EE987 /* CrendentialListViewController.swift */,
+				D9505673212F074D000EE987 /* EditCrendentialViewController.swift */,
 			);
 			path = "Safety First";
+			sourceTree = "<group>";
+		};
+		D950566C212EFD55000EE987 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D950566D212EFD9F000EE987 /* Credentials.swift */,
+				D950566F212EFF1D000EE987 /* CredentialsManager.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F99E2DF1DBD6FB550DCE753A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				48E5819F95A3AB5570FFBD04 /* Pods_Safety_First.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +115,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D9505669212EA13B000EE987 /* Build configuration list for PBXNativeTarget "Safety First" */;
 			buildPhases = (
+				DEF67D49224C1BFCAC4535C6 /* [CP] Check Pods Manifest.lock */,
 				D9505653212EA13A000EE987 /* Sources */,
 				D9505654212EA13A000EE987 /* Frameworks */,
 				D9505655212EA13A000EE987 /* Resources */,
+				43BE9161043123A6E2AE6D28 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -130,12 +176,57 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		43BE9161043123A6E2AE6D28 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Safety First/Pods-Safety First-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Safety First/Pods-Safety First-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DEF67D49224C1BFCAC4535C6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Safety First-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D9505653212EA13A000EE987 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D950565D212EA13A000EE987 /* ViewController.swift in Sources */,
+				D9505672212F0404000EE987 /* CrendentialListViewController.swift in Sources */,
+				D9505670212EFF1D000EE987 /* CredentialsManager.swift in Sources */,
+				D9505674212F074D000EE987 /* EditCrendentialViewController.swift in Sources */,
+				D950566E212EFD9F000EE987 /* Credentials.swift in Sources */,
+				D950565D212EA13A000EE987 /* CredentialViewController.swift in Sources */,
 				D950565B212EA13A000EE987 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -278,6 +369,7 @@
 		};
 		D950566A212EA13B000EE987 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0EBA4EC585AB0DA45AEF33AA /* Pods-Safety First.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -295,6 +387,7 @@
 		};
 		D950566B212EA13B000EE987 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4C95633D50B9C2890535FEEE /* Pods-Safety First.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
