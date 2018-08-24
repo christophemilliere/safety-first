@@ -17,6 +17,7 @@
 		D9505670212EFF1D000EE987 /* CredentialsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D950566F212EFF1D000EE987 /* CredentialsManager.swift */; };
 		D9505672212F0404000EE987 /* CrendentialListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9505671212F0404000EE987 /* CrendentialListViewController.swift */; };
 		D9505674212F074D000EE987 /* EditCrendentialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9505673212F074D000EE987 /* EditCrendentialViewController.swift */; };
+		D99602ED21304B6F00B8B044 /* SecurityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99602EC21304B6F00B8B044 /* SecurityManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		D950566F212EFF1D000EE987 /* CredentialsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialsManager.swift; sourceTree = "<group>"; };
 		D9505671212F0404000EE987 /* CrendentialListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrendentialListViewController.swift; sourceTree = "<group>"; };
 		D9505673212F074D000EE987 /* EditCrendentialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditCrendentialViewController.swift; sourceTree = "<group>"; };
+		D99602EC21304B6F00B8B044 /* SecurityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 			children = (
 				D950566D212EFD9F000EE987 /* Credentials.swift */,
 				D950566F212EFF1D000EE987 /* CredentialsManager.swift */,
+				D99602EC21304B6F00B8B044 /* SecurityManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -184,11 +187,13 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Safety First/Pods-Safety First-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 			);
@@ -228,6 +233,7 @@
 				D950566E212EFD9F000EE987 /* Credentials.swift in Sources */,
 				D950565D212EA13A000EE987 /* CredentialViewController.swift in Sources */,
 				D950565B212EA13A000EE987 /* AppDelegate.swift in Sources */,
+				D99602ED21304B6F00B8B044 /* SecurityManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
