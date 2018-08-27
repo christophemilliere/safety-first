@@ -59,5 +59,10 @@ class Credentials: Object {
         }
     }
     
+    var isPasswordSafe:SecurityManager.SecurityAnsswer {
+        return SecurityManager.shared.isPasswordSafe(password: self.password)
+    }
+    
+    
     
 }

@@ -262,7 +262,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="qFL-ce-ZCi">
-                                <rect key="frame" x="10" y="64" width="300" height="180"/>
+                                <rect key="frame" x="10" y="64" width="300" height="222"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JV5-Bu-JUz">
                                         <rect key="frame" x="0.0" y="0.0" width="48.5" height="24"/>
@@ -296,10 +296,20 @@
                                             <action selector="copyPasswordToClipboard:" destination="xAr-ks-DDW" eventType="touchUpInside" id="SUv-SP-aoB"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nzn-3n-8Br">
+                                        <rect key="frame" x="0.0" y="192" width="300" height="30"/>
+                                        <state key="normal" title="Risque de sécurité">
+                                            <color key="titleColor" red="1" green="0.53817456959989229" blue="0.21184322286710799" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="actionWarning" destination="xAr-ks-DDW" eventType="touchUpInside" id="6R5-1t-EKs"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="9RM-7Y-RqR" firstAttribute="centerX" secondItem="qFL-ce-ZCi" secondAttribute="centerX" id="5mS-sR-fyu"/>
                                     <constraint firstItem="XJv-Sb-2Xf" firstAttribute="centerX" secondItem="qFL-ce-ZCi" secondAttribute="centerX" id="dAz-if-6gu"/>
+                                    <constraint firstItem="nzn-3n-8Br" firstAttribute="centerX" secondItem="qFL-ce-ZCi" secondAttribute="centerX" id="dP9-hY-cvD"/>
                                 </constraints>
                             </stackView>
                         </subviews>
@@ -315,6 +325,7 @@
                         <outlet property="ui_loginLabel" destination="JV5-Bu-JUz" id="XMg-Sd-15N"/>
                         <outlet property="ui_passwordLabel" destination="rWw-yS-Wxi" id="pyG-we-pVD"/>
                         <outlet property="ui_urlLabel" destination="fJN-wX-8kC" id="ZAc-sW-ba8"/>
+                        <outlet property="ui_warningButton" destination="nzn-3n-8Br" id="79t-ej-Ukb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SRI-d6-cZH" userLabel="First Responder" sceneMemberID="firstResponder"/>

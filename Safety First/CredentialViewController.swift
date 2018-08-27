@@ -16,6 +16,7 @@ class CredentialViewController: UIViewController {
         _credential = credentials
     }
     
+    @IBOutlet weak var ui_warningButton: UIButton!
     @IBOutlet weak var ui_loginLabel: UILabel!
     @IBOutlet weak var ui_passwordLabel: UILabel!
     @IBOutlet weak var ui_urlLabel: UILabel!
@@ -31,6 +32,23 @@ class CredentialViewController: UIViewController {
             self.title = cred.title
             ui_loginLabel.text = "Identifiant : \(cred.login)"
             ui_urlLabel.text = "Site web : \(cred.url)"
+            if cred.isPasswordSafe.result {
+                ui_warningButton.isHidden = true
+            } else {
+                ui_warningButton.isHidden = false
+            }
+        }
+    }
+    
+    @IBAction func actionWarning() {
+        if let cred = _credential,
+            cred.isPasswordSafe.result == false,
+            let message = cred.isPasswordSafe.message {
+            let alertController = UIAlertController(title: "Mot de passe dangeureux", message: message, preferredStyle: .alert)
+            
+            alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            
+            present(alertController, animated: true, completion: nil)
         }
     }
     
