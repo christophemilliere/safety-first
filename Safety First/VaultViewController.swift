@@ -8,9 +8,9 @@
 
 import UIKit
 
-class CrendentialListViewController: UITableViewController {
+class VaultViewController: UITableViewController {
     
-    private let _credentialsManager = CredentialsManager()
+    private let _vault:Vault? = VaultManager().getMainVault()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,14 +42,14 @@ class CrendentialListViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return _credentialsManager.getCrendentialCount()
+        return _vault?.getCrendentialCount() ?? 0
     }
 
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "credential-cell", for: indexPath)
 
-        if let crendentials = _credentialsManager.getCrendential(atIndex: indexPath.row) {
+        if let crendentials = _vault?.getCrendential(atIndex: indexPath.row) {
             cell.textLabel?.text = crendentials.title
         }
 
@@ -97,7 +97,7 @@ class CrendentialListViewController: UITableViewController {
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let selectedIndex = self.tableView.indexPathForSelectedRow?.row,
-            let cred = _credentialsManager.getCrendential(atIndex: selectedIndex),
+            let cred = _vault?.getCrendential(atIndex: selectedIndex),
             let credVC = segue.destination as? CredentialViewController{
             credVC.setCredentials(cred)
             

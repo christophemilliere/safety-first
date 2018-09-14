@@ -14,9 +14,10 @@
 		D9505662212EA13B000EE987 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9505661212EA13B000EE987 /* Assets.xcassets */; };
 		D9505665212EA13B000EE987 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9505663212EA13B000EE987 /* LaunchScreen.storyboard */; };
 		D950566E212EFD9F000EE987 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = D950566D212EFD9F000EE987 /* Credentials.swift */; };
-		D9505670212EFF1D000EE987 /* CredentialsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D950566F212EFF1D000EE987 /* CredentialsManager.swift */; };
-		D9505672212F0404000EE987 /* CrendentialListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9505671212F0404000EE987 /* CrendentialListViewController.swift */; };
+		D9505670212EFF1D000EE987 /* Vault.swift in Sources */ = {isa = PBXBuildFile; fileRef = D950566F212EFF1D000EE987 /* Vault.swift */; };
+		D9505672212F0404000EE987 /* VaultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9505671212F0404000EE987 /* VaultViewController.swift */; };
 		D9505674212F074D000EE987 /* EditCrendentialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9505673212F074D000EE987 /* EditCrendentialViewController.swift */; };
+		D9791BB9214BD9C900F24900 /* VaultManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9791BB8214BD9C900F24900 /* VaultManager.swift */; };
 		D99602ED21304B6F00B8B044 /* SecurityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99602EC21304B6F00B8B044 /* SecurityManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -32,9 +33,10 @@
 		D9505664212EA13B000EE987 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D9505666212EA13B000EE987 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D950566D212EFD9F000EE987 /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
-		D950566F212EFF1D000EE987 /* CredentialsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialsManager.swift; sourceTree = "<group>"; };
-		D9505671212F0404000EE987 /* CrendentialListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrendentialListViewController.swift; sourceTree = "<group>"; };
+		D950566F212EFF1D000EE987 /* Vault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vault.swift; sourceTree = "<group>"; };
+		D9505671212F0404000EE987 /* VaultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaultViewController.swift; sourceTree = "<group>"; };
 		D9505673212F074D000EE987 /* EditCrendentialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditCrendentialViewController.swift; sourceTree = "<group>"; };
+		D9791BB8214BD9C900F24900 /* VaultManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaultManager.swift; sourceTree = "<group>"; };
 		D99602EC21304B6F00B8B044 /* SecurityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -80,15 +82,16 @@
 		D9505659212EA13A000EE987 /* Safety First */ = {
 			isa = PBXGroup;
 			children = (
+				D9791BB7214BD7B700F24900 /* viewController */,
+				D9505671212F0404000EE987 /* VaultViewController.swift */,
+				D9505673212F074D000EE987 /* EditCrendentialViewController.swift */,
+				D950565C212EA13A000EE987 /* CredentialViewController.swift */,
 				D950566C212EFD55000EE987 /* Model */,
 				D950565A212EA13A000EE987 /* AppDelegate.swift */,
-				D950565C212EA13A000EE987 /* CredentialViewController.swift */,
 				D950565E212EA13A000EE987 /* Main.storyboard */,
 				D9505661212EA13B000EE987 /* Assets.xcassets */,
 				D9505663212EA13B000EE987 /* LaunchScreen.storyboard */,
 				D9505666212EA13B000EE987 /* Info.plist */,
-				D9505671212F0404000EE987 /* CrendentialListViewController.swift */,
-				D9505673212F074D000EE987 /* EditCrendentialViewController.swift */,
 			);
 			path = "Safety First";
 			sourceTree = "<group>";
@@ -97,10 +100,18 @@
 			isa = PBXGroup;
 			children = (
 				D950566D212EFD9F000EE987 /* Credentials.swift */,
-				D950566F212EFF1D000EE987 /* CredentialsManager.swift */,
+				D950566F212EFF1D000EE987 /* Vault.swift */,
 				D99602EC21304B6F00B8B044 /* SecurityManager.swift */,
+				D9791BB8214BD9C900F24900 /* VaultManager.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		D9791BB7214BD7B700F24900 /* viewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = viewController;
 			sourceTree = "<group>";
 		};
 		F99E2DF1DBD6FB550DCE753A /* Frameworks */ = {
@@ -227,10 +238,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D9505672212F0404000EE987 /* CrendentialListViewController.swift in Sources */,
-				D9505670212EFF1D000EE987 /* CredentialsManager.swift in Sources */,
+				D9505672212F0404000EE987 /* VaultViewController.swift in Sources */,
+				D9505670212EFF1D000EE987 /* Vault.swift in Sources */,
 				D9505674212F074D000EE987 /* EditCrendentialViewController.swift in Sources */,
 				D950566E212EFD9F000EE987 /* Credentials.swift in Sources */,
+				D9791BB9214BD9C900F24900 /* VaultManager.swift in Sources */,
 				D950565D212EA13A000EE987 /* CredentialViewController.swift in Sources */,
 				D950565B212EA13A000EE987 /* AppDelegate.swift in Sources */,
 				D99602ED21304B6F00B8B044 /* SecurityManager.swift in Sources */,

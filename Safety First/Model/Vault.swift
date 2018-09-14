@@ -9,13 +9,13 @@
 import Foundation
 import RealmSwift
 
-class CredentialsManager {
+class Vault {
     
     private let _realm:Realm
     private let _credentialList:Results<Credentials>
     
-    init() {
-        _realm = try! Realm()
+    init(withRealm realm: Realm) {
+        _realm = realm
         _credentialList = _realm.objects(Credentials.self)
     }
     

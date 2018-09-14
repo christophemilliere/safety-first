@@ -40,9 +40,9 @@ class EditCrendentialViewController: UITableViewController {
             if let title = ui_titleField.text,
                 let login = ui_loginField.text,
                 let password = ui_passwordField.text,
-                let url = ui_urlField.text {
-                let credentialsManager = CredentialsManager()
-                _ = credentialsManager.addCredentials(title: title, login: login, password: password, url: url)
+                let url = ui_urlField.text,
+                let vault = VaultManager().getMainVault() {
+                _ = vault.addCredentials(title: title, login: login, password: password, url: url)
                 
             }
             
