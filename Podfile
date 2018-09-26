@@ -9,4 +9,5 @@ target 'Safety First' do
 
   pod 'RealmSwift', '~>3.7.6'
    pod 'Alamofire', '~> 4.7'
+   pod 'KeychainAccess'
 end

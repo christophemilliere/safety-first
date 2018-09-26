@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		17267EA27C4E278DF851B9CA /* Pods_Safety_First.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48E5819F95A3AB5570FFBD04 /* Pods_Safety_First.framework */; };
+		D90602ED215B5FAD0082FBB1 /* SetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90602EC215B5FAD0082FBB1 /* SetupViewController.swift */; };
+		D90AAF522150D40A0059EEC3 /* DataExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90AAF512150D40A0059EEC3 /* DataExtension.swift */; };
+		D9408FC7215224E300F8C0E4 /* GateKeeperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9408FC6215224E300F8C0E4 /* GateKeeperViewController.swift */; };
 		D950565B212EA13A000EE987 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D950565A212EA13A000EE987 /* AppDelegate.swift */; };
 		D950565D212EA13A000EE987 /* CredentialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D950565C212EA13A000EE987 /* CredentialViewController.swift */; };
 		D9505660212EA13A000EE987 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D950565E212EA13A000EE987 /* Main.storyboard */; };
@@ -25,6 +28,9 @@
 		0EBA4EC585AB0DA45AEF33AA /* Pods-Safety First.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Safety First.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Safety First/Pods-Safety First.debug.xcconfig"; sourceTree = "<group>"; };
 		48E5819F95A3AB5570FFBD04 /* Pods_Safety_First.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Safety_First.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C95633D50B9C2890535FEEE /* Pods-Safety First.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Safety First.release.xcconfig"; path = "Pods/Target Support Files/Pods-Safety First/Pods-Safety First.release.xcconfig"; sourceTree = "<group>"; };
+		D90602EC215B5FAD0082FBB1 /* SetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupViewController.swift; sourceTree = "<group>"; };
+		D90AAF512150D40A0059EEC3 /* DataExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataExtension.swift; sourceTree = "<group>"; };
+		D9408FC6215224E300F8C0E4 /* GateKeeperViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GateKeeperViewController.swift; sourceTree = "<group>"; };
 		D9505657212EA13A000EE987 /* Safety First.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Safety First.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D950565A212EA13A000EE987 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D950565C212EA13A000EE987 /* CredentialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialViewController.swift; sourceTree = "<group>"; };
@@ -61,6 +67,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		D90AAF502150D3F10059EEC3 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D90AAF512150D40A0059EEC3 /* DataExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		D950564E212EA13A000EE987 = {
 			isa = PBXGroup;
 			children = (
@@ -82,6 +96,7 @@
 		D9505659212EA13A000EE987 /* Safety First */ = {
 			isa = PBXGroup;
 			children = (
+				D90AAF502150D3F10059EEC3 /* Extensions */,
 				D9791BB7214BD7B700F24900 /* viewController */,
 				D9505671212F0404000EE987 /* VaultViewController.swift */,
 				D9505673212F074D000EE987 /* EditCrendentialViewController.swift */,
@@ -110,6 +125,8 @@
 		D9791BB7214BD7B700F24900 /* viewController */ = {
 			isa = PBXGroup;
 			children = (
+				D9408FC6215224E300F8C0E4 /* GateKeeperViewController.swift */,
+				D90602EC215B5FAD0082FBB1 /* SetupViewController.swift */,
 			);
 			path = viewController;
 			sourceTree = "<group>";
@@ -199,12 +216,14 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Safety First/Pods-Safety First-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/KeychainAccess/KeychainAccess.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainAccess.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 			);
@@ -239,12 +258,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				D9505672212F0404000EE987 /* VaultViewController.swift in Sources */,
+				D9408FC7215224E300F8C0E4 /* GateKeeperViewController.swift in Sources */,
 				D9505670212EFF1D000EE987 /* Vault.swift in Sources */,
 				D9505674212F074D000EE987 /* EditCrendentialViewController.swift in Sources */,
 				D950566E212EFD9F000EE987 /* Credentials.swift in Sources */,
 				D9791BB9214BD9C900F24900 /* VaultManager.swift in Sources */,
+				D90602ED215B5FAD0082FBB1 /* SetupViewController.swift in Sources */,
 				D950565D212EA13A000EE987 /* CredentialViewController.swift in Sources */,
 				D950565B212EA13A000EE987 /* AppDelegate.swift in Sources */,
+				D90AAF522150D40A0059EEC3 /* DataExtension.swift in Sources */,
 				D99602ED21304B6F00B8B044 /* SecurityManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

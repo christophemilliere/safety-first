@@ -8,6 +8,7 @@
 
 import UIKit
 import RealmSwift
+import MobileCoreServices
 
 class CredentialViewController: UIViewController {
     
@@ -61,7 +62,8 @@ class CredentialViewController: UIViewController {
 
     @IBAction func copyPasswordToClipboard(_ sender: Any) {
         if let cred = _credential {
-            UIPasteboard.general.string = cred.password
+            let expiationDate = Date(timeIntervalSinceNow: 60 * 5)
+            UIPasteboard.general.setItems([[kUTTypeUTF8PlainText as String : cred.password]], options: [UIPasteboardOption.expirationDate: expiationDate])
         }
     }
     
